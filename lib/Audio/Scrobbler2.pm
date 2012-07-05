@@ -1,39 +1,27 @@
 package Audio::Scrobbler2;
+
 use strict;
+use warnings;
 
 BEGIN {
     use Exporter ();
     use vars qw($VERSION @ISA @EXPORT @EXPORT_OK %EXPORT_TAGS);
-    $VERSION     = '0.03';
+
+    $VERSION     = '0.04';
     @ISA         = qw(Exporter);
-    #Give a hoot don't pollute, do not export more than needed by default
     @EXPORT      = qw();
     @EXPORT_OK   = qw();
     %EXPORT_TAGS = ();
 }
 
 
-#################### subroutine header begin ####################
+=head2 new
 
-=head2 sample_function
-
- Usage     : How to use this function/method
- Purpose   : What it does
- Returns   : What it returns
- Argument  : What it wants to know
- Throws    : Exceptions and other anomolies
- Comment   : This is a sample subroutine header.
-           : It is polite to include more pod and fewer comments.
-
-See Also   :
+    Create and return new Audio::Scrobbler2 object.
 
 =cut
 
-#################### subroutine header end ####################
-
-
-sub new
-{
+sub new {
     my ($class, %parameters) = @_;
 
     my $self = bless ({}, ref ($class) || $class);
@@ -42,40 +30,24 @@ sub new
 }
 
 
-#################### main pod documentation begin ###################
-## Below is the stub of documentation for your module.
-## You better edit it!
-
-
 =head1 NAME
 
 Audio::Scrobbler2 - Interface to last.fm scrobbler API
 
+
 =head1 SYNOPSIS
 
-  use Audio::Scrobbler2;
-  blah blah blah
+    use Audio::Scrobbler2;
+
+    my $scrobbler = Audio::Scrobbler2->new;
+
+    $scrobbler->scrobble("Artist", "Track");
 
 
 =head1 DESCRIPTION
-
-Stub documentation for this module was created by ExtUtils::ModuleMaker.
-It looks like the author of the extension was negligent enough
-to leave the stub unedited.
-
-Blah blah blah.
-
-
 =head1 USAGE
-
-
-
 =head1 BUGS
-
-
-
 =head1 SUPPORT
-
 
 
 =head1 AUTHOR
@@ -84,6 +56,7 @@ Blah blah blah.
     CPAN ID: BAGET
     baget@cpan.org
     http://ky6uk.org
+
 
 =head1 COPYRIGHT
 
@@ -100,9 +73,4 @@ perl(1).
 
 =cut
 
-#################### main pod documentation end ###################
-
-
 1;
-# The preceding line will help the module return a true value
-
