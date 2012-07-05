@@ -10,5 +10,6 @@ WriteMakefile(
     ABSTRACT     => 'Interface to last.fm scrobbler API',
     PREREQ_PM    => {
                      'Test::Simple' => 0.44,
+                     ''
                     },
 );
