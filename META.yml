@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Audio-Scrobbler2
-version:            0.02
+version:            0.03
 abstract:           Interface to last.fm scrobbler API
 author:
     - Roman (Ky6uk) Nuritdinov (baget@cpan.org)
@@ -11,8 +11,11 @@ configure_requires:
 build_requires:
     ExtUtils::MakeMaker:  0
 requires:
-    :              ~
-    Test::Simple:  0.44
+    Digest::MD5:      2.51
+    JSON::XS:         2.32
+    Test::Simple:     0.98
+    URI::Escape:      3.31
+    WWW::Curl::Easy:  4.15
 no_index:
     directory:
         - t
